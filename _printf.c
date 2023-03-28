@@ -20,14 +20,14 @@ int _printf(const char *format, ...)
 	}
 	while (format[i] != '\0')
 	{
-		if (format[i] == '%' && format[i + 1] == 'c')
+		else if (format[i] == '%' && format[i + 1] == 'c')
 		{
 			c = (char)va_arg(args, int);
 			_putchar(c);
 			r++;
 			i = i + 2;
 		}
-		if (format[i] == '%' && format[i + 1] == 's')
+		else if (format[i] == '%' && format[i + 1] == 's')
 		{
 			str = va_arg(args, char *);
 			for (j = 0; str[j] != '\0'; j++)
@@ -37,14 +37,14 @@ int _printf(const char *format, ...)
 			}
 			i = i + 2;
 		}
-		if (format[i] == '%' && format[i + 1] == 'd')
+		else if (format[i] == '%' && format[i + 1] == 'd')
 		{
 			n = va_arg(args, int);
 			r1 = print_int(n);
 			r = r + r1;
 			i = i + 2;
 		}
-		if (format[i] == '%' && format[i + 1] == 'i')
+		else if (format[i] == '%' && format[i + 1] == 'i')
 		{
 			ni = va_arg(args, int);
 			r2 = print_i(ni);

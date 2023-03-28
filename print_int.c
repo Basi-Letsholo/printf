@@ -32,5 +32,5 @@ int print_int(int n)
 		n = n % x;
 		x = x / 10;
 	}
-	return (r - 1);
+	return (r);
 }
