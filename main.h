@@ -9,5 +9,7 @@
 
 int _putchar(char c);
 int _printf(const char *format, ...);
+int print_int(int n);
+int print_i(int n);
 
 #endif
